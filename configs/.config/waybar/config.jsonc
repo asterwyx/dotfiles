@@ -109,7 +109,7 @@
     },
 
     "clock": {
-        "format": "{:%I:%M %p}",
+        "format": "{:%R}",
         "rotate": 0,
         "format-alt": "{:%R 󰃭 %d·%m·%y}",
         "tooltip-format": "<tt>{calendar}</tt>",
@@ -236,7 +236,6 @@
     },
 
     "custom/notifications": {
-        "tooltip": false,
         "format": "{icon} {}",
         "rotate": 0,
         "format-icons": {
