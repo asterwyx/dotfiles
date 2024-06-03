@@ -69,8 +69,8 @@ end
 
 # go env
 if command -s go > /dev/null
-	set -x GOROOT /usr/lib/go
-	set -x GOPATH $HOME/go
+  set -x GOROOT /usr/lib/go
+  set -x GOPATH $HOME/go
   if test -d /usr/share/gocode
     set -x GOPATH /usr/share/gocode $GOPATH
   end
@@ -105,7 +105,7 @@ test -d $venv_path && source $venv_path/activate.fish
 # freerdp
 if command -s wlfreerdp > /dev/null
   function wlrdp
-		wlfreerdp +compression +clipboard -themes -wallpaper -grab-keyboard /gdi:hw /drive:Downloads,$HOME/Downloads $argv /dynamic-resolution
+	wlfreerdp +compression +clipboard -themes -wallpaper -grab-keyboard /gdi:hw /drive:Downloads,$HOME/Downloads $argv /dynamic-resolution /mic /audio-mode:0
   end
 end
 
@@ -118,12 +118,12 @@ if command -s zoxide > /dev/null
 end
 
 if status is-login
-    exec bash -c "test -e /etc/profile && source /etc/profile;\
-    exec fish"
+  exec bash -c "test -e /etc/profile && source /etc/profile;\
+  exec fish"
 end
 
 if test (tty) = "/dev/tty1" -a -z "$DISPLAY"
-    startde w
+  startde w
 end
 # function fish_prompt
 #   set_color cyan; echo (pwd)
