@@ -16,7 +16,8 @@ end
 set PATH ~/.local/bin $PATH
 
 # icecream path (optional)
-set PATH /usr/lib/icecream/libexec/icecc/bin $PATH
+set -x PATH /usr/lib/icecream/bin $PATH
+set -x PATH /usr/lib/icecream/libexec/icecc/bin $PATH
 # Always mkdir a path (this doesn't inhibit functionality to make a single dir)
 abbr -a mkdir mkdir -p
 
@@ -122,9 +123,9 @@ if status is-login
   exec fish"
 end
 
-if test (tty) = "/dev/tty1" -a -z "$DISPLAY"
-  startde w
-end
+#if test (tty) = "/dev/tty1" -a -z "$DISPLAY"
+#  startde w
+#end
 # function fish_prompt
 #   set_color cyan; echo (pwd)
 #   set_color green; echo '> '
