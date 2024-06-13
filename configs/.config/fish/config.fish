@@ -37,7 +37,7 @@ if command -s eza > /dev/null
   abbr -a tree eza -T --icons=auto
 end
 if command -s bat > /dev/null
-  abbr -a cat bat
+  abbr -a cat bat -p
 end
 if command -s rsync > /dev/null
   abbr -a cp rsync -avP
