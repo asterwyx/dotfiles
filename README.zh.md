@@ -26,6 +26,8 @@
 
 **在 Archlinux 上安装包（需要 aur）:**
 
+一些工具可以通过`cargo/pip/npm`等工具来安装。
+
 1. shell
 
 ```bash

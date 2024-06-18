@@ -25,6 +25,8 @@ English | [中文](README.zh.md)
 
 **Install packages in Archlinux (need aur):**
 
+Some tools can also be installed from `cargo/pip/npm`.
+
 1. shell
 
 ```bash
