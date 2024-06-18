@@ -80,7 +80,7 @@ r_override="window {height: ${kb_hint_height:-65%}; width: ${kb_hint_width:-30%}
 
 # read hypr font size
 fnt_override=$(gsettings get org.gnome.desktop.interface font-name | awk '{gsub(/'\''/,""); print $NF}')
-fnt_override="configuration {font: \"Maple Mono SC NF ${fnt_override}\";}"
+fnt_override="configuration {font: \"Maple Mono NF CN ${fnt_override}\";}"
 
 # read hypr theme icon
 icon_override=$(gsettings get org.gnome.desktop.interface icon-theme | sed "s/'//g")
@@ -229,11 +229,11 @@ def arg_mapping: { #! Do not Change this used for Demo only... As this will chan
 
     def description_mapping: {  #? Derived from dispatcher and Gives Description for Dispatchers; Basically translates dispatcher.
     "movefocus": "Move Focus",
-    "resizeactive": "Resize Active Floting Window",
+    "resizeactive": "Resize Active Floating Window",
     "exit" : "End Hyprland Session",
     "movetoworkspacesilent" : "Silently Move to Workspace",
     "movewindow" : "Move Window",
-    "exec" : "" , #? Remove exec as execuatable will give the Description from separate function
+    "exec" : "" , #? Remove exec as executable will give the Description from separate function
     "movetoworkspace" : "Move To Workspace:",
     "workspace" : "Navigate to Workspace:",
     "togglefloating" : "Toggle Floating",
@@ -244,7 +244,7 @@ def arg_mapping: { #! Do not Change this used for Demo only... As this will chan
     "mouse" : "Use Mouse"
 
   };
-  #? Funtions to Convert modmask into Keys, There should be a beter math for this but Im lazy
+  #? Functions to Convert modmask into Keys, There should be a better math for this but Im lazy
   #? Also we can just map it manually too
   def get_keys:
     if . == 0 then
@@ -291,7 +291,7 @@ def get_keycode:
 if .keybind and .keybind != " " and .keybind != "" then .keybind |= (split(" ") | map(select(length > 0)) | if length > 1 then join("  + ") else .[0] end) else .keybind = "" end |  #? Clean up
 
   .arg |= (arg_mapping[.] // .) | #? See above for how arg is converted
- #!    .executables |= gsub(".sh"; "") | #? Usefull soon
+ #!    .executables |= gsub(".sh"; "") | #? Useful soon
 
   .executables |= (executables_mapping[.] // .) | #? conversions
   .description |= (description_mapping[.] // .)    #? Convert to description
@@ -329,11 +329,11 @@ GROUP() {
 #? Format this is how the keybinds are displayed.
 DISPLAY() { awk -v kb_hint_delim="${kb_hint_delim:->}" -F '!=!' '{if ($0 ~ /=/ && $6 != "") printf "%-25s %-2s %-30s\n", $5, kb_hint_delim, $6; else if ($0 ~ /=/) printf "%-25s\n", $5; else print $0}'; }
 
-#? Extra design use for distiction
+#? Extra design use for distinction
 header="$(printf "%-35s %-1s %-20s\n" "󰌌 Keybinds" "󱧣" "Description")"
 line="$(printf '%.0s━' $(seq 1 68) "")"
 
-#! this Part Gives extra laoding time as I don't have efforts to make single space for each class
+#! this Part Gives extra loading time as I don't have efforts to make single space for each class
 metaData="$(echo "${jsonData}" | jq -r '"\(.category) !=! \(.modmask) !=! \(.key) !=! \(.dispatcher) !=! \(.arg) !=! \(.keybind) !=! \(.description) \(.executables) !=! \(.flags)"' | tr -s ' ' | sort -k 1)"
 # echo "$metaData"
 
@@ -373,7 +373,7 @@ if [ -n "$run_sel" ] && [ "$(echo "$run_sel" | wc -l)" -eq 1 ]; then
   if [ "$repeat" = true ]; then
 
     while true; do
-      repeat_command=$(echo -e "Repeat" | rofi -dmenu -no-custom -p "[Enter] repeat; [ESC] exit") #? Needed a separate Rasi ? Dunno how to make; Maybe Something like comfirmation rasi for buttons Yes and No then the -p will be the Question like Proceed? Repeat?
+      repeat_command=$(echo -e "Repeat" | rofi -dmenu -no-custom -p "[Enter] repeat; [ESC] exit") #? Needed a separate Rasi ? Dunno how to make; Maybe Something like confirmation rasi for buttons Yes and No then the -p will be the Question like Proceed? Repeat?
 
       if [ "$repeat_command" = "Repeat" ]; then
         # Repeat the command here

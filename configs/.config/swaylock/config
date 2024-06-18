@@ -24,4 +24,4 @@ datestr=%a, %B %e
 timestr=%I:%M %p
 fade-in=0.3
 ignore-empty-password
-font=Maple Mono SC NF
+font=Maple Mono NF CN

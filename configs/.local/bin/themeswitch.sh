@@ -109,7 +109,6 @@ if pkg_installed flatpak ; then
     fi
 fi
 
-
 #// wallpaper
 
 "${scrDir}/swwwallpaper.sh" -s "$(readlink "${hydeThemeDir}/wall.set")"

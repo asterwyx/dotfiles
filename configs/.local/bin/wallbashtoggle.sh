@@ -15,7 +15,7 @@ wallbashModes=("theme" "auto" "dark" "light")
 rofi_wallbash()
 {
     [[ "${rofiScale}" =~ ^[0-9]+$ ]] || rofiScale=10
-    r_scale="configuration {font: \"Maple Mono SC NF ${rofiScale}\";}"
+    r_scale="configuration {font: \"Maple Mono NF CN ${rofiScale}\";}"
     elem_border=$(( hypr_border * 4 ))
     r_override="window{border-radius:${elem_border}px;} element{border-radius:${elem_border}px;}"
     rofiSel=$(parallel echo {} ::: "${wallbashModes[@]}" | rofi -dmenu -theme-str "${r_scale}" -theme-str "${r_override}" -config "${rofiConf}" -select "${wallbashModes[${enableWallDcol}]}")

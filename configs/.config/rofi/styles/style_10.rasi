@@ -8,7 +8,7 @@ configuration {
     display-window:              " ";
     drun-display-format:         "{name}";
     window-format:               "{w}{t}";
-    font:                        "Maple Mono SC NF 10";
+    font:                        "Maple Mono NF CN 10";
     icon-theme:                  "Tela-circle-dracula";
 }
 

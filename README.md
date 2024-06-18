@@ -33,8 +33,11 @@ yay -S eza fish rsync bat starship htop
 
 2. fonts
 
-```
-yay -S ttf-firacode-nerd ttf-maple-sc-nerd
+Download fonts from here: [MapleMono-NF-CN.zip](https://github.com/subframe7536/Maple-font/releases)
+```bash
+unzip MapleMono-NF-CN.zip -d MapleFont
+sudo cp -r MapleFont /usr/share/fonts
+sudo fc-cache -fv
 ```
 
 3. utils

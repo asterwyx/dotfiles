@@ -3,7 +3,7 @@ configuration {
     modi:                        "drun";
     show-icons:                  true;
     drun-display-format:         "{name}";
-    font:                        "Maple Mono SC NF 10";
+    font:                        "Maple Mono NF CN 10";
 }
 
 @theme "~/.config/rofi/theme.rasi"

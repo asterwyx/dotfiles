@@ -11,3 +11,4 @@ for sysMon in "${!pkgChk[@]}"; do
         break
     fi
 done
+
