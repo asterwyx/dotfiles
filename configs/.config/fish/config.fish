@@ -100,8 +100,12 @@ if command -s lualatex > /dev/null
 end
 
 # pythen venv
-set -l venv_path $HOME/.python_venv/bin
-test -d $venv_path && source $venv_path/activate.fish
+set -l venv_path $HOME/.pyenv/bin
+test -d $venv_path && fish_add_path $PYENV_ROOT/bin
+
+if command -s pyenv > /dev/null
+  pyenv init - | source
+end
 
 # freerdp
 if command -s wlfreerdp > /dev/null

@@ -112,8 +112,28 @@ yay -S python fnm
 ```
 
 ```bash
-python -m venv ~/.python_venv
+yay -S pyenv fnm
 ```
+
+列出可安装 python 版本:
+
+```bash
+pyenv install --list
+```
+
+安装一个选好的 python 版本:
+
+```bash
+pyenv install <version>
+```
+
+使用某个 python 版本：
+
+```bash
+pyenv shell <version>
+```
+
+安装 nodejs:
 
 ```bash
 fnm install <version/--latest> --node-dist-mirror=https://npmmirror.com/mirrors/node

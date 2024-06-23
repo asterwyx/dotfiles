@@ -107,12 +107,28 @@ It is easy to rm the symbol, just run `./config.sh uninstall`
 Install packages:
 
 ```bash
-yay -S python fnm
+yay -S python pyenv fnm
 ```
 
+list python versions:
+
 ```bash
-python -m venv ~/.python_venv
+pyenv install --list
 ```
+
+install python for a select version:
+
+```bash
+pyenv install <version>
+```
+
+use python for a select version:
+
+```bash
+pyenv shell <version>
+```
+
+install nodejs:
 
 ```bash
 fnm install <version/--latest>
