@@ -15,9 +15,6 @@ end
 # base env
 set PATH ~/.local/bin $PATH
 
-# icecream path (optional)
-set -x PATH /usr/lib/icecream/bin $PATH
-set -x PATH /usr/lib/icecream/libexec/icecc/bin $PATH
 # Always mkdir a path (this doesn't inhibit functionality to make a single dir)
 abbr -a mkdir mkdir -p
 
