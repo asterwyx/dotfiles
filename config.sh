@@ -34,6 +34,7 @@ dict=(
     [mpv]=mpv
     [kitty]=kitty
     [fastfetch]=fastfetch
+    [bash]=bash
     [fish]=fish
     [starship]=starship
     [gdb]=gdb
@@ -48,7 +49,7 @@ get_dir() {
     for element in $(ls -A $1); do
         path="$1/$element"
         home_path=${path/"$cur_path/configs"/"$HOME"}
-        if [[ $path =~ ".config/" ]] || [[ $path =~ ".themes/" ]] || [ -f $path ]; then
+        if [[ $path =~ ".config/" ]] || [[ $path =~ ".bash_it/" ]] || [[ $path =~ ".themes/" ]] || [ -f $path ]; then
             parent_path=$(dirname $home_path)
             [ ! -d $parent_path ] && mkdir -p $parent_path && echo mkdir -p $parent_path done!
             [ -d $path ] && [ -d $home_path ] && rm -rf $home_path && rm -rf $home_path done!

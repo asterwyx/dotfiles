@@ -1,3 +1,6 @@
 [submodule "configs/.config/nvim"]
 	path = configs/.config/nvim
-	url = https://github.com/Groveer/nvchad-starter.git
+	url = git@github.com:Groveer/nvchad-starter.git
+[submodule "configs/.bash_it"]
+	path = configs/.bash_it
+	url = git@github.com:Bash-it/bash-it.git
