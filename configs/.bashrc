@@ -89,17 +89,6 @@ fi
 
 alias mkdir="mkdir -pv"
 
-if command -v eza >/dev/null; then
-    alias ls="eza --icons=auto"
-    alias l="ls -al"
-    alias ll="ls -l"
-    alias tree="ls -T"
-fi
-
-if command -v bat >/dev/null; then
-    alias cat="bat -p"
-fi
-
 if command -v rsync >/dev/null; then
     alias cp="rsync -avP"
 fi
@@ -117,13 +106,25 @@ date-changelog() {
 
 export PATH="$HOME/.local/bin:$PATH"
 
-if command -v starship >/dev/null; then
-    eval $(starship init bash)
-fi
-
 if test -d ${HOME}/.cargo/bin; then
     export PATH="$HOME/.cargo/bin:$PATH"
 fi
+if command -v starship >/dev/null; then
+    eval "$(starship init bash)"
+fi
+if command -v eza >/dev/null; then
+    alias ls="eza --icons=auto"
+    alias l="ls -al"
+    alias ll="ls -l"
+    alias tree="ls -T"
+fi
+if command -v bat >/dev/null; then
+    alias cat="bat -p"
+fi
+if command -v zoxide >/dev/null; then
+    eval "$(zoxide init bash)"
+fi
+
 if command -v fnm >/dev/null; then
     eval "$(fnm env --use-on-cd)"
 fi
