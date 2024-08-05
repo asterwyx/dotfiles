@@ -85,6 +85,9 @@ pip install hyprshade
 2. 运行`./init.sh`脚本，它会初始化环境变量并且释放资源。
 3. 如果在运行过程中发现在家目录有冲突文件，请手动删除它，然后运行：`./config.sh install`。
 
+> [!IMPORTANT] 注意
+> 运行`./init.sh`脚本会自动运行`./config.sh install`，该脚本会删除您的`~/.bashrc`文件，请在运行前备份好它！
+
 ## 运行
 
 在 tty 中执行`startde w`。

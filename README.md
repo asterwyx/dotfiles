@@ -84,6 +84,9 @@ pip install hyprshade
 2. Run `./init.sh`, it will initialize env and patch sources.
 3. If there is a conflicting file, delete it manually. run `./config.sh install`
 
+> [!IMPORTANT]
+> `./init.sh` will excuable `./config.sh install`. **It will rm your `~/.bashrc`, please backup your `~/.bashrc` first!**
+
 ## Run
 
 run `startde w` in tty.
