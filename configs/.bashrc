@@ -119,11 +119,11 @@ export PATH="$HOME/.local/bin:$PATH"
 
 eval $(starship init bash)
 
+if test -d ${HOME}/.cargo/bin; then
+    export PATH="$HOME/.cargo/bin:$PATH"
+fi
 if command -v fnm >/dev/null; then
     eval "$(fnm env --use-on-cd)"
-fi
-if command -v cargo >/dev/null; then
-    export PATH="$HOME/.cargo/bin:$PATH"
 fi
 if test -d /usr/lib/qt6/bin; then
     export PATH="/usr/lib/qt6/bin/:$PATH"
