@@ -117,7 +117,9 @@ date-changelog() {
 
 export PATH="$HOME/.local/bin:$PATH"
 
-eval $(starship init bash)
+if command -v starship >/dev/null; then
+    eval $(starship init bash)
+fi
 
 if test -d ${HOME}/.cargo/bin; then
     export PATH="$HOME/.cargo/bin:$PATH"
