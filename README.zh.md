@@ -5,15 +5,14 @@
 ## Themes
 
 <div align="center">
-  <img src="https://raw.githubusercontent.com/prasanthrangan/hyprdots/main/Source/assets/hyprdots_banner.png">
 
-<br><br>
+![hyde_banner](https://raw.githubusercontent.com/prasanthrangan/hyprdots/main/Source/assets/hyde_banner.png)
 
-  <img style="margin: 0 5px 10px 0; width: 48%;" src="https://raw.githubusercontent.com/prasanthrangan/hyprdots/main/Source/assets/showcase_1.png" />
-  <img style="margin: 0 0 10px 5px; width: 48%;" src="https://raw.githubusercontent.com/prasanthrangan/hyprdots/main/Source/assets/showcase_2.png" />
-  <img style="margin: 0 5px 10px 0; width: 48%;" src="https://raw.githubusercontent.com/prasanthrangan/hyprdots/main/Source/assets/showcase_3.png" />
-  <img style="margin: 0 0 10px 5px; width: 48%;" src="https://raw.githubusercontent.com/prasanthrangan/hyprdots/main/Source/assets/showcase_4.png" />
-</div>
+<br>
+
+https://github.com/prasanthrangan/hyprdots/assets/106020512/7f8fadc8-e293-4482-a851-e9c6464f5265
+
+<br></div>
 
 <div align="right">
   <br>
