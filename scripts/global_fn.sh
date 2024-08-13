@@ -70,7 +70,7 @@ nvidia_detect() {
         done <<< "${dGPU[@]}"
         return 0
     fi
-    if grep -iq nvidia <<< "${dGPU[@]}"; then
+    if grep -iq nvidia <<< "${!dGPU[@]}"; then
         return 0
     else
         return 1

@@ -90,7 +90,7 @@ fi
 alias mkdir="mkdir -pv"
 
 if command -v rsync >/dev/null; then
-    alias cp="rsync -avP"
+    alias cp="rsync -azvP"
 fi
 
 if command -v vim >/dev/null; then

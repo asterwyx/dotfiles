@@ -100,7 +100,7 @@ interior.element=itemview
 frame=true
 interior=true
 text.iconspacing=3
-text.toggle.color=#<wallbash_1xa1> 
+text.toggle.color=#<wallbash_1xa1>
 
 [RadioButton]
 inherits=PanelButtonCommand
@@ -145,7 +145,7 @@ text.margin.left=5
 text.margin.right=5
 indicator.size=0
 
-[Dock] 
+[Dock]
 interior.element=toolbar
 frame.element=toolbar
 frame=true
@@ -385,6 +385,10 @@ interior.element=menuitem
 indicator.size=8
 text.focus.color=#<wallbash_1xa9>
 text.press.color=#<wallbash_1xa9>
+text.margin.top=2
+text.margin.bottom=2
+text.margin.left=15
+text.margin.right=5
 
 [MenuBarItem]
 inherits=PanelButtonCommand
