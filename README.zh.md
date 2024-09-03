@@ -30,7 +30,7 @@ https://github.com/prasanthrangan/hyprdots/assets/106020512/7f8fadc8-e293-4482-a
 1. shell
 
 ```bash
-yay -S eza fish rsync bat starship htop
+yay -S eza rsync bat starship htop
 ```
 
 2. fonts
@@ -51,7 +51,7 @@ yay -S qt5-wayland qt6-wayland
 4. hypr
 
 ```bash
-yay -S dunst libbotify hyprland rofi-lbonn-wayland-git waybar swww swaylock-effects-git wlogout grimblast-git cliphist pipewire-pulse swappy hyde-cli-git wf-recorder
+yay -S dunst libbotify hyprland rofi-wayland waybar swww swaylock-effects-git wlogout grimblast-git cliphist pipewire-pulse swappy hyde-cli-git wf-recorder
 ```
 
 5. dependency
@@ -69,7 +69,7 @@ yay -S nwg-look kvantum qt5ct qt6ct
 7. apps
 
 ```bash
-yay -S google-chrome kitty fastfetch neovim fcitx5
+yay -S google-chrome/firefox kitty fastfetch neovim fcitx5
 ```
 
 8. others
