@@ -147,3 +147,4 @@ test -f "/usr/share/java/plantuml/plantuml.jar" && export PLANTUML_JAR="/usr/sha
 if command -v lualatex >/dev/null; then
     alias llatex="lualatex -shell-escape -synctex=1 -interaction=nonstopmode -file-line-error"
 fi
+

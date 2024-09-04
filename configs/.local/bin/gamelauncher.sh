@@ -17,7 +17,7 @@ fn_steam() {
 SteamPaths=`grep '"path"' $SteamLib | awk -F '"' '{print $4}'`
 ManifestList=`find $SteamPaths/steamapps/ -type f -name "appmanifest_*.acf" 2>/dev/null`
 
-# read intalled games
+# read installed games
 GameList=$(echo "$ManifestList" | while read acf
 do
     appid=`grep '"appid"' $acf | cut -d '"' -f 4`
@@ -54,8 +54,8 @@ meta_data="/tmp/hyprdots-$(id -u)-lutrisgames.json"
 
 # Retrieve the list of games from Lutris in JSON format
 #TODO Only call this if new apps are installed...
- # [ ! -s "${meta_data}" ] &&  
-notify-send -a "t1" "Please wait... " -t 4000 
+ # [ ! -s "${meta_data}" ] &&
+notify-send -a "t1" "Please wait... " -t 4000
 
 eval "${run_lutris}" -j -l 2> /dev/null| jq --arg icons "$icon_path/" --arg prefix ".jpg" '.[] |= . + {"select": (.name + "\u0000icon\u001f" + $icons + .slug + $prefix)}' > "${meta_data}"
 
@@ -85,7 +85,7 @@ if [ -z "${run_lutris}" ] || echo "$*" | grep -q "steam" ; then
         SteamThumb="$HOME/.var/app/com.valvesoftware.Steam/.local/share/Steam/appcache/librarycache"
         steamlaunch="flatpak run com.valvesoftware.Steam"
     fi
-    
+
     if [ ! -f $SteamLib ] || [ ! -d $SteamThumb ] ; then
         notify-send -a "t1" "Steam library not found!"
         exit 1
