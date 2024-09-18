@@ -111,7 +111,7 @@
     "clock": {
         "format": "{:%R}",
         "rotate": 0,
-        "format-alt": "{:%R 󰃭 %d·%m·%y}",
+        "format-alt": "{:%R 󰃭 %y-%m-%d}",
         "tooltip-format": "<span>{calendar}</span>",
         "calendar": {
             "mode": "month",
